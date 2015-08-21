@@ -77,7 +77,7 @@ arduino.ar: $(AR_OBJ)
 
 test_motors.elf: $(LINK_OBJ) $(AR)
 	@echo 'Starting combiner'
-	"/usr/share/arduino/hardware/tools/arm/bin/arm-none-eabi-gcc" -O -Wl,--gc-sections,--relax,--defsym=__rtc_localtime=1440152614 "-T/usr/share/arduino/hardware/teensy/avr/cores/teensy3/mk20dx256.ld"  -mthumb -mcpu=cortex-m4 -o "/home/ethel/arduino-eclipse-plugin/workspace/test_motors/Release/test_motors.elf"   $(LINK_OBJ) $(AR)  "/home/ethel/arduino-eclipse-plugin/workspace/test_motors/Release/arduino.ar" "-L/home/ethel/arduino-eclipse-plugin/workspace/test_motors/Release" -larm_cortexM4l_math -lm
+	"/usr/share/arduino/hardware/tools/arm/bin/arm-none-eabi-gcc" -O -Wl,--gc-sections,--relax,--defsym=__rtc_localtime=1440153128 "-T/usr/share/arduino/hardware/teensy/avr/cores/teensy3/mk20dx256.ld"  -mthumb -mcpu=cortex-m4 -o "/home/ethel/arduino-eclipse-plugin/workspace/test_motors/Release/test_motors.elf"   $(LINK_OBJ) $(AR)  "/home/ethel/arduino-eclipse-plugin/workspace/test_motors/Release/arduino.ar" "-L/home/ethel/arduino-eclipse-plugin/workspace/test_motors/Release" -larm_cortexM4l_math -lm
 	@echo 'Finished building: $@'
 	@echo ' '
 
